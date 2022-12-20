@@ -61,5 +61,11 @@ function startGame() {
 
 function cardPicker() {
   let cardDeck = Math.floor(Math.random() * 13) + 1; // generating a random number form 1 to 13
-  return cardDeck;
+  if (cardDeck > 10) {
+    return 10;
+  } else if (cardDeck === 1) {
+    return 11;
+  } else {
+    return cardDeck;
+  }
 }

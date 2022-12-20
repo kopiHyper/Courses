@@ -4,14 +4,8 @@ const player = {
   chip: "200",
 };
 
-/// Card picker function thats draws two cards from 2-11 points
-let firstCard = cardPicker();
-let secondCard = cardPicker();
-///
-
-let cards = [firstCard, secondCard];
-
-let sum = firstCard + secondCard;
+let cards = [];
+let sum = 0;
 
 let hasBlackJack = false;
 let isAlive = true;
@@ -24,7 +18,7 @@ let cardsEl = document.getElementById("cards-el");
 let playerEl = document.getElementById("player-el");
 
 //Rendering info about player
-playerEl.textContent = player.name + " $" + player.chip;
+playerEl.textContent = player.name + ": $" + player.chip;
 //
 
 function renderGame() {
@@ -48,14 +42,21 @@ function renderGame() {
 }
 
 function newCard() {
-  let card = cardPicker();
-  cards.push(card);
-  sum += card;
-  renderGame();
+  if (isAlive === true && !hasBlackJack) {
+    let card = cardPicker();
+    cards.push(card);
+    sum += card;
+    renderGame();
+  } else if (cards.length < 2) {
+  }
 }
 
 function startGame() {
   isAlive = true;
+  let firstCard = cardPicker();
+  let secondCard = cardPicker();
+  cards = [firstCard, secondCard];
+  sum = firstCard + secondCard;
   renderGame();
 }
 

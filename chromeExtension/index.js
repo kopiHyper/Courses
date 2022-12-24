@@ -7,7 +7,12 @@ let myLeads = [];
 inputBtn.addEventListener("click", function () {
   myLeads.push(inputEl.value);
   inputEl.value = "";
+
+  localStorage.setItem("myLead", JSON.stringify(myLeads));
+
   renderLeads();
+
+  console.log(localStorage.getItem("myLead"));
 });
 
 const renderLeads = () => {

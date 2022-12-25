@@ -2,8 +2,17 @@ const inputBtn = document.getElementById("input-btn");
 const inputEl = document.getElementById("input-el");
 const ulEl = document.getElementById("u-list");
 const delBtn = document.getElementById("delete-btn");
+const tabBtn = document.getElementById("save-btn");
 
 let myLeads = [];
+
+const tabs = [{ url: "https://www.linkedin.com/in/per-harald-borgen/" }];
+
+tabBtn.addEventListener("click", function () {
+  myLeads.push(tabs[0].url);
+  localStorage.setItem("myLeads", JSON.stringify(myLeads));
+  renderLeads(myLeads);
+});
 
 //Getting elements form localStorage
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));

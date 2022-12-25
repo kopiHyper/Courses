@@ -1,15 +1,16 @@
 # Courses
 **Projects from freeCodeCamp.org channel:**
-<br>*-BlackJack*
-<br>*-PassengerCounterApp*
-<br>*-chromeExtension*
+<br><sub>(https://www.youtube.com/watch?v=jS4aFq5-91M&t=6894s&ab_channel=freeCodeCamp.org)</sub>
+<br>*- BlackJack*
+<br>*- PassengerCounterApp*
+<br>*- chromeExtension*
 
 
 **Projects from freeCodeCamp.org course on their site:**
-<br>*-...*
+<br>*- ...*
 
 **Projects from YouTube video's:**
-<br>*-...*
+<br>*- ...*
 
 ### Will be updated every new project 😁
 

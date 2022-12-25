@@ -5,7 +5,7 @@
 <br>*-chromeExtension*
 
 
-**Projects from freeCodeCamp.org course on site:**
+**Projects from freeCodeCamp.org course on their site:**
 <br>*-...*
 
 **Projects from YouTube video's:**

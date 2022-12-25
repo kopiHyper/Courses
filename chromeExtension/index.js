@@ -11,7 +11,7 @@ const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 //Assigning them to myLeads array and rendering them
 if (leadsFromLocalStorage) {
   myLeads = leadsFromLocalStorage;
-  renderLeads();
+  renderLeads(myLeads);
 }
 
 //Saving elements in localStorage form the input element
@@ -21,23 +21,23 @@ inputBtn.addEventListener("click", function () {
 
   localStorage.setItem("myLeads", JSON.stringify(myLeads));
 
-  renderLeads();
+  renderLeads(myLeads);
 });
 
 //Deleting all elements on double click
 delBtn.addEventListener("dblclick", function () {
   localStorage.clear();
   myLeads = [];
-  renderLeads();
+  renderLeads(myLeads);
 });
 
 //->Rendering elements in DOM
-function renderLeads() {
+function renderLeads(leads) {
   let listItem = "";
-  for (let i = 0; i < myLeads.length; i++) {
+  for (let i = 0; i < leads.length; i++) {
     listItem += `
     <li>
-        <a target='_blank' href='${myLeads[i]}'> ${myLeads[i]} </a>
+        <a target='_blank' href='${leads[i]}'> ${leads[i]} </a>
     </li>`;
   }
 

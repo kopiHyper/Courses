@@ -6,13 +6,14 @@ const tabBtn = document.getElementById("save-btn");
 
 let myLeads = [];
 
-const tabs = [{ url: "https://www.linkedin.com/in/per-harald-borgen/" }];
-
 //Save Tab function that saves the current tab from the browser to the local storage and render it.
 tabBtn.addEventListener("click", function () {
-  myLeads.push(tabs[0].url);
-  localStorage.setItem("myLeads", JSON.stringify(myLeads));
-  renderLeads(myLeads);
+  //Getting the current tab from the browser
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    myLeads.push(tabs[0].url);
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    renderLeads(myLeads);
+  });
 });
 
 //Getting elements form localStorage

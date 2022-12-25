@@ -1,8 +1,9 @@
 # Courses
 **Projects from freeCodeCamp.org channel:**
 <br>*-BlackJack*
-<br>*-chromeExtension*
 <br>*-PassengerCounterApp*
+<br>*-chromeExtension*
+
 
 **Projects from freeCodeCamp.org course on site:**
 <br>*-...*
